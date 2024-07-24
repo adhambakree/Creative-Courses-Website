@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200;300;400;500;600;700;800;900;1000&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+   
+}
+
+.word{
+color: #ED553D;
+display: inline;
+}
+.header {
+width: 100%;
+height: 100vh;
+background-image:url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+background-size: cover;
+background-position: center;
+}
+
+#logo{
+text-decoration: none;
+color: #0c020894;
+text-transform: uppercase;
+font-weight: 700;
+font-size: 1.8em;
+cursor: pointer;
+}
+
+.navigation{
+width: 90%;
+margin: auto;
+padding: 35px 0;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.navigation ul li{
+list-style: none;
+display: inline-block;
+margin: 0 20px;
+position: relative;
+}
+
+.navigation ul li a{
+text-decoration: none;
+color: #fff;
+text-transform: uppercase;
+}
+
+.navigation ul li ::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navigation ul li :hover::after{
+width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #0c020894;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #ED553D;
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+}
+
+span{
+    background: #ED553D;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}
